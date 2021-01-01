@@ -8,6 +8,15 @@ app.get("/books",(req,res)=>{
     console.log(results);
   })
 })  
+app.put("/books",(req,res)=>{
+  const {title , author, pages, publisher, published_at}=req.body
+  const query=`INSERT INTO books (title , author, pages, publisher, published_at)VALUES(?,?,?,?,?)`
+  const data =[title , author, pages, publisher, published_at]
+  connection.query(query,(err, results)=>{
+    console.log(res);
+    res.json(res)
+  })
+}) 
 
 app.get("/books/:book_id",(req,res)=>{
   const query=`SELECT * FROM books WHERE book_id =?`
