@@ -15,20 +15,38 @@ const isABalancedString = (str) => {
   // WRITE YOUR CODE BELOW THIS LINE
   const arr =str.split("")
   var sqr=0
+  var sqrClose=0
   var para=0
+  var paraClose=0
   var carly=0
-  for (let i = 0; i < arr.length; i++) {  
+  var carlyClose=0
+  // for (let i = 0; i < arr.length; i++) {  
     for (let j = 0; j < arr.length; j++) {
-      if (arr[j]==="]"||) {
-        
+      if (arr[j]==="]") {
+        sqrClose++
       }
-      if (arr[j]==="}"||) {
-        
+      if (arr[j]==="[") {
+        sqr++
+      }
+      if (arr[j]==="}") {
+        carlyClose++
+      }
+      if (arr[j]==="{") {
+        carly++
       }
       if (arr[j]===")") {
-        
+        paraClose++
       }
-    }  
+      if (arr[j]==="(") {
+        para++
+      }
+    // }  
+    
+  }
+  if (sqr===sqrClose&&para===paraClose&&carly===carlyClose) {
+    console.log(true);
+  }else{
+    console.log(false);
   }
 };
 
