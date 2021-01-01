@@ -45,8 +45,10 @@ const isABalancedString = (str) => {
   }
   if (sqr===sqrClose&&para===paraClose&&carly===carlyClose) {
     console.log(true);
+    return "yes"
   }else{
     console.log(false);
+    return "no"
   }
 };
 
