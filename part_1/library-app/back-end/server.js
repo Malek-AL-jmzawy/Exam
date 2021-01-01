@@ -7,7 +7,7 @@ app.get("/books",(req,res)=>{
   connection.query(query,(err, results)=>{
     console.log(results);
   })
-})
+})  
 
 app.get("/books/:book_id",(req,res)=>{
   const query=`SELECT * FROM books WHERE book_id =?`
