@@ -24,7 +24,7 @@ app.get("/books/:book_id",(req,res)=>{
   connection.query(query,data,(err, results)=>{
     console.log(results);
   })
-})
+}) 
 app.delete("/books/:book_id",(req,res)=>{
   const query=`DELETE FROM books WHERE book_id =?`
   const data =req.params.book_id
